@@ -1,4 +1,3 @@
-
 ;; smex
 ;; 
 (require 'smex)

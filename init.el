@@ -2,7 +2,7 @@
 ;;
 ;;  Emcas Configuration
 ;;
-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set load path
 (add-to-list 'load-path (expand-file-name "init.d" user-emacs-directory))
@@ -13,3 +13,4 @@
 (require 'init-ido)
 (require 'init-org)
 (require 'init-theme)
+(require 'init-magit)
