@@ -1,2 +1,3 @@
-(ido-mode 1)
+(ido-mode t)
+
 (provide 'init-ido)

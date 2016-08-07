@@ -7,10 +7,24 @@
 ;; Set load path
 (add-to-list 'load-path (expand-file-name "init.d" user-emacs-directory))
 
-(require 'init-screen)
+(require 'init-basic)
 (require 'init-package)
 (require 'init-smex)
 (require 'init-ido)
 (require 'init-org)
 (require 'init-theme)
 (require 'init-magit)
+(require 'init-yasnippet)
+(require 'init-autopair)
+(require 'init-auto-complete)
+(require 'init-ac-clang)
+(require 'init-projectile)
+(require 'init-dired+)
+
+;; References
+;
+; http://blog.guorongfei.com/2014/09/16/emacs-c-cpp-python-config/
+; https://www.zybuluo.com/qqiseeu/note/17692
+;
+;
+;

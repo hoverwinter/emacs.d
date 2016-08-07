@@ -1,1 +1,19 @@
 * Yet Another Emacs Configuration
+
+Emacs >= 24.3
+
+Magit needs Emacs 24.4+ & git 1.9.2+
+
+* Have a look
+
+[[emacs.png]]
+
+* Notation
+
+The configuration is under *development*.
+
+Some basic emacs lisp is used to customize emacs.
+
+* About this document
+
+Written by Emacs /org-mode/, Github support *.org* file.
