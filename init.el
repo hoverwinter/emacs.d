@@ -20,11 +20,6 @@
 (require 'init-ac-clang)
 (require 'init-projectile)
 (require 'init-dired+)
-
-;; References
-;
-; http://blog.guorongfei.com/2014/09/16/emacs-c-cpp-python-config/
-; https://www.zybuluo.com/qqiseeu/note/17692
-;
-;
-;
+(require 'init-flymake)
+(require 'init-ace-jump)
+(require 'init-gnuplot)
