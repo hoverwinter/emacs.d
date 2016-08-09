@@ -23,3 +23,5 @@
 (require 'init-flymake)
 (require 'init-ace-jump)
 (require 'init-gnuplot)
+(require 'init-haskell)
+(require 'init-elpy)
