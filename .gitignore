@@ -7,3 +7,5 @@ smex-items
 /auto-save-list
 ido.last
 /.emacsbackup
+kys
+init.d/kys.el
