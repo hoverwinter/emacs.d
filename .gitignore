@@ -9,3 +9,6 @@ ido.last
 /.emacsbackup
 kys
 init.d/kys.el
+network-security.data
+TODO
+snippets/

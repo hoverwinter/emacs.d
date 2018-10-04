@@ -7,7 +7,7 @@
 (defun require-package (package)
   (if (package-installed-p package)
       t
-    (if (assoc pakcage package-archive-contents)
+    (if (assoc package package-archive-contents)
 	(package-install package)
       (progn
 	(package-refresh-contents)

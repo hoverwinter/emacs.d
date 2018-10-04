@@ -1,0 +1,13 @@
+F8 (neotree) toggle neotree
+
+"C-c SPC" ==> ace-jump-word-mode
+
+enter first character of a word, select the highlighted key to move to it.
+
+"C-u C-c SPC" ==> ace-jump-char-mode
+
+enter a character for query, select the highlighted key to move to it.
+
+"C-u C-u C-c SPC" ==> ace-jump-line-mode
+
+each non-empty line will be marked, select the highlighted key to move to it.
