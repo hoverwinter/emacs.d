@@ -47,7 +47,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (neotree scala-mode ensime haskell-mode gnuplot ace-jump-mode yasnippet smex projectile magit color-theme-sanityinc-solarized autopair auto-complete-clang))))
+    (slime neotree scala-mode ensime haskell-mode gnuplot ace-jump-mode yasnippet smex projectile magit color-theme-sanityinc-solarized autopair auto-complete-clang))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
