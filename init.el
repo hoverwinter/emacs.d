@@ -18,6 +18,9 @@
 (require 'init-lsp-mode)
 (require 'init-yasnippet)
 
+;; we use https://github.com/universal-ctags/ctags as backend
+(require 'init-counsel-etags)
+
 ;; you need to install clang-format
 ;; create clang-format file using google style
 ;; clang-format -style=google -dump-config > .clang-format
