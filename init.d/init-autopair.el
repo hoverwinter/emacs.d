@@ -1,5 +1,5 @@
-(require-package 'autopair)
+;(require-package 'autopair)
 
-(add-hook 'c-mode-common-hook 'autopair-mode)
+;(add-hook 'c-mode-common-hook 'autopair-mode)
 
 (provide 'init-autopair)

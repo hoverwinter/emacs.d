@@ -1,5 +1,4 @@
 (require-package 'lsp-mode)
-(require-package 'company-lsp)  ; use company-mode for completion
 (require-package 'lsp-ui)
 (require-package 'lsp-treemacs) ; project wide error overview
 ;(require-package 'dap-mode)     ; your language is supported by the debugger
