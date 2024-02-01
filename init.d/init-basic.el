@@ -4,7 +4,7 @@
 ;(scroll-bar-mode 0)
 
 ;; Line/Column Numbers
-(global-linum-mode t)
+;; (global-linum-mode t)
 (column-number-mode t)
 
 ;; Welcome
