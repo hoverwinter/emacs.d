@@ -1,6 +1,11 @@
-* Key Bindings
+* Usage Guide (Emacs 29+)
+
+This configuration uses *use-package* (built-in since Emacs 29) for declarative
+package management.  Package sources point to the TUNA mirror.
 
 ** Navigation (Avy)
+
+Jump to any visible text in a buffer.
 
 | Key         | Command          | Description                          |
 |-------------+------------------+--------------------------------------|
@@ -13,31 +18,122 @@
 |-------+------------------+----------------------|
 | =F8=  | neotree-toggle   | Toggle file sidebar  |
 
-** Search & Completion (Consult)
+** Minibuffer Completion (Vertico / Orderless / Marginalia)
 
-| Key       | Command            | Description                |
-|-----------+--------------------+----------------------------|
-| =C-s=    | consult-line       | Search lines in buffer     |
-| =C-x b=  | consult-buffer     | Switch buffer              |
-| =M-g g=  | consult-goto-line  | Go to line number          |
-| =M-s r=  | consult-ripgrep    | Ripgrep project search     |
+Vertico provides a vertical completion UI in the minibuffer.  Orderless lets
+you type space-separated patterns in any order (e.g. =def init= matches
+=init-default=).  Marginalia adds rich annotations (file sizes, docstrings,
+etc.) next to each candidate.
+
+All three activate automatically — no keybindings required.
+
+| Key     | Description                        |
+|---------+------------------------------------|
+| =C-n=   | Next candidate in minibuffer       |
+| =C-p=   | Previous candidate in minibuffer   |
+| =RET=   | Select candidate                   |
+
+** Search & Navigation (Consult)
+
+Consult replaces several built-in commands with richer alternatives.
+
+| Key         | Command            | Description                |
+|-------------+--------------------+----------------------------|
+| =C-s=       | consult-line       | Search lines in buffer     |
+| =C-x b=     | consult-buffer     | Switch buffer              |
+| =M-g g=     | consult-goto-line  | Go to line number          |
+| =M-g M-g=   | consult-goto-line  | Go to line number (alt)    |
+| =M-s r=     | consult-ripgrep    | Ripgrep project search     |
+
+** In-buffer Completion (Corfu / Cape)
+
+Corfu shows a small popup with completion candidates as you type (auto-triggers
+after 2 characters with a 0.2 s delay).  Cape provides additional
+completion-at-point backends (=dabbrev= words and file paths).
+
+| Key     | Description                        |
+|---------+------------------------------------|
+| =M-n=   | Next completion candidate          |
+| =M-p=   | Previous completion candidate      |
+| =RET=   | Accept completion                  |
+| =C-g=   | Dismiss completion popup           |
+
+** LSP (Eglot)
+
+Eglot is the built-in LSP client (Emacs 29+).  It starts automatically in
+=c-mode= and =c++-mode= (requires =clangd= to be installed).
+
+Eglot integrates with *xref*, *eldoc*, *Flymake*, and *imenu* so the standard
+Emacs keybindings just work:
+
+| Key       | Command                   | Description                      |
+|-----------+---------------------------+----------------------------------|
+| =M-.=     | xref-find-definitions     | Jump to definition               |
+| =M-?=     | xref-find-references      | Find all references              |
+| =M-,=     | xref-go-back              | Return to previous location      |
+| =C-c l r= | eglot-rename              | Rename symbol                    |
+| =C-c l a= | eglot-code-actions        | Code actions (quick-fix, etc.)   |
+| =C-c l f= | eglot-format              | Format buffer / region           |
+
+** Tree-sitter (treesit-auto)
+
+Tree-sitter grammars are installed on demand (=treesit-auto-install= is set to
+=prompt=).  When a grammar is available the corresponding =*-ts-mode= is
+activated automatically, giving you faster and more accurate syntax
+highlighting.
+
+No keybindings — this works transparently.
+
+** Git (Magit)
+
+| Key       | Command        | Description                    |
+|-----------+----------------+--------------------------------|
+| =C-x g=   | magit-status   | Open Magit status buffer       |
+| =C-x M-g= | magit-dispatch | Magit dispatch popup           |
+
+Inside the Magit status buffer, press =?= to see all available actions.
 
 ** Org-mode
 
 | Key       | Command          | Description             |
 |-----------+------------------+-------------------------|
-| =C-c l=  | org-store-link   | Store an org link       |
-| =C-c a=  | org-agenda       | Open agenda             |
-| =C-c c=  | org-capture      | Capture a note          |
+| =C-c l=   | org-store-link   | Store an org link       |
+| =C-c a=   | org-agenda       | Open agenda             |
+| =C-c c=   | org-capture      | Capture a note          |
+
+Notes are captured to =~/notes.org= by default.
 
 ** Snippets (YASnippet)
 
+Custom snippets live in =~/.emacs.d/snippets/=.  The default =TAB= binding is
+removed to avoid conflicts with indentation and completion; use the explicit
+binding below.
+
 | Key       | Command     | Description        |
 |-----------+-------------+--------------------|
-| =C-c k=  | yas-expand  | Expand snippet     |
+| =C-c k=   | yas-expand  | Expand snippet     |
 
 ** Formatting (clang-format)
 
+Requires =clang-format= to be installed and a =.clang-format= file in your
+project.
+
 | Key         | Command              | Description               |
 |-------------+----------------------+---------------------------|
-| =C-c C-f=  | clang-format-region  | Format selected region    |
+| =C-c C-f=   | clang-format-region  | Format selected region    |
+
+** Theme
+
+- GUI: =sanityinc-solarized-dark=
+- Terminal: =wombat=
+- Font: =Fantasque Sans Mono= at 14 px (when available)
+
+** Built-in Behaviours
+
+These are enabled globally via =init-basic.el=:
+
+- *electric-pair-mode* — auto-close parentheses, brackets, quotes
+- *column-number-mode* — show column number in mode line
+- *display-time-mode* — show clock in mode line
+- Short answers (=y/n= instead of =yes/no=)
+- Backups stored in =~/.emacs.d/.emacsbackup/=
