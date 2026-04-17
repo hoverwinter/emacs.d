@@ -1,30 +1,31 @@
 ;; Interface
-(menu-bar-mode 0) 
-;(tool-bar-mode 0)
-;(scroll-bar-mode 0)
+(menu-bar-mode 0)
+(when (fboundp 'tool-bar-mode) (tool-bar-mode 0))
+(when (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 
 ;; Line/Column Numbers
-;; (global-linum-mode t)
 (column-number-mode t)
 
 ;; Welcome
 (setq inhibit-startup-message t)
 
 ;; Backup
-(setq make-backup-files t) ; backup enabled
-(setq kept-old-version 2) ; keep the oldest two files
-(setq kept-new-version 2) ; keep the newest two files
-(setq delete-old-versions t) ; delete the other versions
-(setq backup-directory-alist '(("" . "~/.emacs.d/.emacsbackup"))) ; backup directory
+(setq make-backup-files t)
+(setq kept-old-version 2)
+(setq kept-new-version 2)
+(setq delete-old-versions t)
+(setq backup-directory-alist '(("" . "~/.emacs.d/.emacsbackup")))
 
 ;; Display time
 (display-time-mode t)
-; (setq display-time-24hr-format t) ; 24-hour time format
 
 ;; Image
-(setq auto-image-file-mode t) ; open images automatically
+(setq auto-image-file-mode t)
 
 ;; Prompt
-(setq use-short-answers t) ; use y/n
+(setq use-short-answers t)
+
+;; Auto-pairing (built-in replacement for autopair)
+(electric-pair-mode t)
 
 (provide 'init-basic)
