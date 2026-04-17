@@ -1,16 +1,29 @@
 * Yet Another Emacs Configuration
 
-Emacs >= 24.3
+Requires *Emacs 29+*.
 
-Magit needs Emacs 24.4+ & git 1.9.2+
+** Features
 
+- *use-package* (built-in) for declarative package management
+- *Vertico / Orderless / Marginalia / Consult* for minibuffer completion
+- *Corfu / Cape* for in-buffer completion
+- *Eglot* (built-in) for LSP (clangd for C/C++)
+- *treesit-auto* for Tree-sitter syntax highlighting
+- *Avy* for jump-to-visible-text navigation
+- *Magit* for Git
+- *YASnippet* for snippets
+- *clang-format* for C/C++ formatting
+- *Neotree* for file tree sidebar
+- *Org-mode* with capture / agenda
 
-* Notation
+** Structure
 
-The configuration is under *development*.
+| File               | Purpose                              |
+|--------------------+--------------------------------------|
+| =early-init.el=    | GC tuning for fast startup           |
+| =init.el=          | Load path & require modules          |
+| =init.d/=          | One file per feature                 |
 
-Some basic emacs lisp is used to customize emacs.
+** About this document
 
-* About this document
-
-Written by Emacs /org-mode/, Github support *.org* file.
+Written in Emacs /org-mode/. GitHub renders =*.org= natively.

@@ -1,13 +1,43 @@
-F8 (neotree) toggle neotree
+* Key Bindings
 
-"C-c SPC" ==> ace-jump-word-mode
+** Navigation (Avy)
 
-enter first character of a word, select the highlighted key to move to it.
+| Key         | Command          | Description                          |
+|-------------+------------------+--------------------------------------|
+| =C-c SPC=   | avy-goto-char    | Jump to a character anywhere visible |
+| =M-g l=     | avy-goto-line    | Jump to a visible line               |
 
-"C-u C-c SPC" ==> ace-jump-char-mode
+** File Tree (Neotree)
 
-enter a character for query, select the highlighted key to move to it.
+| Key   | Command          | Description          |
+|-------+------------------+----------------------|
+| =F8=  | neotree-toggle   | Toggle file sidebar  |
 
-"C-u C-u C-c SPC" ==> ace-jump-line-mode
+** Search & Completion (Consult)
 
-each non-empty line will be marked, select the highlighted key to move to it.
+| Key       | Command            | Description                |
+|-----------+--------------------+----------------------------|
+| =C-s=    | consult-line       | Search lines in buffer     |
+| =C-x b=  | consult-buffer     | Switch buffer              |
+| =M-g g=  | consult-goto-line  | Go to line number          |
+| =M-s r=  | consult-ripgrep    | Ripgrep project search     |
+
+** Org-mode
+
+| Key       | Command          | Description             |
+|-----------+------------------+-------------------------|
+| =C-c l=  | org-store-link   | Store an org link       |
+| =C-c a=  | org-agenda       | Open agenda             |
+| =C-c c=  | org-capture      | Capture a note          |
+
+** Snippets (YASnippet)
+
+| Key       | Command     | Description        |
+|-----------+-------------+--------------------|
+| =C-c k=  | yas-expand  | Expand snippet     |
+
+** Formatting (clang-format)
+
+| Key         | Command              | Description               |
+|-------------+----------------------+---------------------------|
+| =C-c C-f=  | clang-format-region  | Format selected region    |

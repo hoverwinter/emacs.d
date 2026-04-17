@@ -1,0 +1,27 @@
+* Changelog
+
+** 2026-04-17
+
+*** Bug Fixes
+
+- *init-basic.el*: Fix ~kept-old-version~ → ~kept-old-versions~ typo (setting was silently ignored)
+- *init-basic.el*: Use ~user-emacs-directory~ instead of hard-coded =~/.emacs.d/= for backup directory
+- *init-org.el*: Remove deprecated ~org-iswitchb~ binding (removed in Emacs 29)
+- *init-avy.el*: Change ~avy-goto-line~ binding from =C-c l= to =M-g l= to avoid conflict with ~org-store-link~
+
+*** Style / Consistency
+
+- *init-eglot.el*: Rewrite with ~use-package~ + ~:ensure nil~ to match project convention
+- *init-org.el*: Migrate from ~global-set-key~ to ~use-package :bind~ style
+- *init-theme.el*: Move ~custom-enabled-themes~ and config into ~use-package~ block
+
+*** Housekeeping
+
+- *.gitignore*: Remove stale entries for deleted packages (~smex-items~, ~ido.last~, ~ac-comphist.dat~, ~.lsp-session-v1~)
+- *.gitignore*: Add ~custom.el~ (machine-generated, should not be committed)
+
+*** Documentation
+
+- *README.org*: Update minimum Emacs version from 24.3 to 29+; document current feature stack and file structure
+- *usage.org*: Rewrite key binding reference for current packages (Avy, Consult, Org, YASnippet, clang-format); remove obsolete ace-jump-mode documentation
+- *CHANGELOG.org*: Create this file to track changes

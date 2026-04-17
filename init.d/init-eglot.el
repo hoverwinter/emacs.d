@@ -1,8 +1,8 @@
 ;; Eglot - built-in LSP client (Emacs 29+)
 ;; Requires clangd to be installed for C/C++
-(require 'eglot)
-
-(add-hook 'c-mode-hook #'eglot-ensure)
-(add-hook 'c++-mode-hook #'eglot-ensure)
+(use-package eglot
+  :ensure nil
+  :hook ((c-mode . eglot-ensure)
+         (c++-mode . eglot-ensure)))
 
 (provide 'init-eglot)

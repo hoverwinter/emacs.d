@@ -11,10 +11,11 @@
 
 ;; Backup
 (setq make-backup-files t)
-(setq kept-old-version 2)
-(setq kept-new-version 2)
+(setq kept-old-versions 2)
+(setq kept-new-versions 2)
 (setq delete-old-versions t)
-(setq backup-directory-alist '(("" . "~/.emacs.d/.emacsbackup")))
+(setq backup-directory-alist
+      `(("" . ,(expand-file-name ".emacsbackup" user-emacs-directory))))
 
 ;; Display time
 (display-time-mode t)
