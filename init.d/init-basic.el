@@ -25,6 +25,6 @@
 (setq auto-image-file-mode t) ; open images automatically
 
 ;; Prompt
-(fset 'yes-or-no-p 'y-or-n-p) ; use y/n
+(setq use-short-answers t) ; use y/n
 
 (provide 'init-basic)
