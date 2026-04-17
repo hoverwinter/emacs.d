@@ -6,6 +6,7 @@
   (load-theme 'wombat t))
 
 (when (display-graphic-p)
-  (set-frame-font "fantasque sans mono:pixelsize=14" nil t))
+  (when (member "Fantasque Sans Mono" (font-family-list))
+    (set-frame-font "fantasque sans mono:pixelsize=14" nil t)))
 
 (provide 'init-theme)
