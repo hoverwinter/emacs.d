@@ -1,3 +1,6 @@
+;; Trust all themes to avoid "Really load?" prompt on startup
+(setq custom-safe-themes t)
+
 (use-package color-theme-sanityinc-solarized
   :custom
   (custom-enabled-themes '(sanityinc-solarized-dark))
